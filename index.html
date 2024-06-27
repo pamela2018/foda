@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz FODA</title>
+  
+ 
+    <style>
+        /* Estilo general */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0c707e; /* Color de fondo */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(172, 45, 45, 0.1);
+            width: 90%;
+            max-width: 1200px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #97ee5e;
+            margin: 10px auto 0;
+        }
+
+        .description {
+            text-align: center;
+            color: #666666;
+            margin-bottom: 40px;
+            font-size: 1.5em;
+            font-style: italic;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Estilo de grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        /* Estilo de encabezados */
+        .header {
+            background-color: #86e032;
+            color: rgb(191, 223, 248);
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid black;
+            transition: background-color 0.3s ease;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: rotate(45deg);
+            animation: animateHeader 3s linear infinite;
+        }
+
+
+
+
+        /* Estilo de elementos */
+        .item {
+            padding: 20px;
+            background-color: #eef3f7;
+            border-radius: 10px;
+            color: #333333;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 1.2em;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+
+
+        .item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: rotate(45deg);
+            transition: all 0.3s ease;
+        }
+
+        .item:hover::before {
+            top: 100%;
+            left: 100%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FODA Cruzado</h1>
+        <div class="grid-container">
+            <div class="item header">EXTERNAS <BR></BR> 
+       </div>
+            <div class="item header">Oportunidades (O)</div>
+            <div class="item header">Amenazas (A)</div>
+
+            <div class="item header"> INTERNAS</div>
+            <div class="item">Aprender más.<br>Adaptación a Nuevas tecnologías.<br>Networking.<br>Formación continua.</div>
+            <div class="item">Enfermedad.<br>Competencia laboral.<br>Cambios económicos.</div>
+
+            <div class="item header">Fortalezas (F)</div>
+            <div class="item header">FO</div>
+            <div class="item header">FA</div>
+            <div class="item">Trabajo en equipo.<br>Responsabilidad.<br>Paciencia.<br>Integridad.</div>
+            <div class="item">Trabajo en equipo + Networking: Aprovechar las habilidades de trabajo en equipo para ampliar y fortalecer la red de contactos profesionales.<br><br>
+                Responsabilidad + Formación continua: Usar tu responsabilidad para comprometerte con programas de formación continua y aprender más.<br><br>
+                Integridad + Adaptación a nuevas tecnologías: Utilizar tu integridad para adaptarte a nuevas tecnologías de manera ética y responsable.</div>
+            <div class="item">Procrastinación + Formación continua: Aprovechar las oportunidades de formación continua para desarrollar técnicas y hábitos que me ayuden a mejorar.<br><br>
+                Falta de organización + Adaptación a nuevas tecnologías: Utilizar nuevas tecnologías y herramientas para mejorar mi organización personal.<br><br>
+                Gestión del tiempo + Aprender más: Buscar métodos y cursos sobre gestión del tiempo para mejorar en este aspecto y aprender más eficientemente.</div>
+
+            <div class="item header">Debilidades (D)</div>
+            <div class="item header">DO</div>
+            <div class="item header">DA</div>
+
+            <div class="item">Procrastinación.<br>Falta de organización.<br>Gestión del tiempo.</div>
+            <div class="item">Trabajo en equipo + Competencia laboral: Usar habilidades de trabajo en equipo para colaborar y competir eficazmente en el entorno laboral.<br><br>
+                Responsabilidad + Cambios económicos: Ser responsable en la gestión de recursos para adaptarse a los cambios económicos.<br><br>
+                Paciencia + Enfermedad: Utilizar tu paciencia para manejar situaciones de enfermedad y mantener un enfoque positivo.</div>
+            <div class="item">Procrastinación + Competencia laboral: Desarrollar estrategias para superar la procrastinación y mantener tu competitividad.<br><br>
+                Falta de organización + Cambios económicos: Mejorar tu organización para ser más adaptable y resiliente frente a cambios económicos.<br><br>
+                Gestión del tiempo + Enfermedad: Implementar una mejor gestión del tiempo para asegurar que puedas manejar tus responsabilidades incluso en tiempos de enfermedad.</div>
+        </div>
+    </div>
+</body>
+</html>
